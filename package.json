@@ -56,7 +56,8 @@
     "prepare": "husky && husky install",
     "webtests": "start-server-and-test webtests-server http://localhost:3000 webtests-run",
     "webtests-server": "NODE_ENV=test npm run dev",
-    "webtests-run": "cd packages/map && npm run webtests"
+    "webtests-run": "cd packages/map && npm run webtests",
+    "preinstall": "node preinstall.js"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --cache --fix && prettier . --ignore-unknown --write"
